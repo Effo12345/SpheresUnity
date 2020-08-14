@@ -7,7 +7,7 @@ public class Pyramid : MonoBehaviour
     public bool isCollected = false;
     public GameObject slot;
     private Transform target;
-    private float speed = 2.0f;
+    private float speed = 4.0f;
     float slowerSpeed = 1.5f;
     private GameObject pyramidParent;
     public List<GameObject> Pyramids;

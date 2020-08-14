@@ -104992,6 +104992,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1332547548, guid: 10073578ff8eeed488565ece9d927471, type: 3}
+      propertyPath: m_text
+      value: Simple Beginnings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332547548, guid: 10073578ff8eeed488565ece9d927471, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 5001721191230822330, guid: 10073578ff8eeed488565ece9d927471,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -105101,6 +105109,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5001721191850636206, guid: 10073578ff8eeed488565ece9d927471,
+        type: 3}
+      propertyPath: shouldWaitToFade
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383402159567954907, guid: 10073578ff8eeed488565ece9d927471,
+        type: 3}
+      propertyPath: m_text
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383402159567954907, guid: 10073578ff8eeed488565ece9d927471,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6383402159567954907, guid: 10073578ff8eeed488565ece9d927471,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10073578ff8eeed488565ece9d927471, type: 3}

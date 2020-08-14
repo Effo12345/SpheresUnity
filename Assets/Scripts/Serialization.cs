@@ -7,18 +7,27 @@ public class Serialization : MonoBehaviour
 {
     public bool isMenu;
     [HideInInspector]
-    public static int nextBuildIndex = 1;
+    public static int nextBuildIndex = 0;
     int currentBuildIndex;
 
     private void OnEnable()
     {
-        JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("spheres level data"), this);
+       //JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("spheres level data"), this);
 
         //Debug.Log("Values read as, currentBuildIndex = " + currentBuildIndex + " and nextBuildIndex = " + nextBuildIndex);
 
         currentBuildIndex = SceneManager.GetActiveScene().buildIndex;
 
+        nextBuildIndex = PlayerPrefs.GetInt("nextBuildIndex");
+
+        //Debug.Log("nextBuildIndex = " + nextBuildIndex + " from PlayerPrefs");
+
         //Debug.Log("After set, currentBuildIndex is " + currentBuildIndex);
+
+        if (isMenu && nextBuildIndex == 0)
+        {
+            nextBuildIndex = 1;
+        }
     }
 
     public void NextLevel()
@@ -33,7 +42,10 @@ public class Serialization : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerPrefs.SetString("spheres level data", JsonUtility.ToJson(this, true));
+        //PlayerPrefs.SetString("spheres level data", JsonUtility.ToJson(this, true));
+
+        PlayerPrefs.SetInt("nextBuildIndex", nextBuildIndex);
+        PlayerPrefs.Save();
 
         //Debug.Log("Values written as, currentBuildIndex = " + currentBuildIndex + " and nextBuildIndex = " + nextBuildIndex);
     }
